@@ -1,0 +1,23 @@
+pipeline{
+      Agent any
+        stages{
+           stage('Build'){
+                 steps{
+                     echo 'Building Java application'
+                     sh 'javac Hello.java'
+                  }
+             }
+         stage('Test'){
+                 steps{
+                     echo 'Testing Java application'
+                     sh 'java Hello'
+                  }
+             }
+         stage('Build'){
+                 steps{
+                     echo 'Deploying Java application'
+                     echo 'Application deployed successfully'
+                  }
+             }
+        }
+}
