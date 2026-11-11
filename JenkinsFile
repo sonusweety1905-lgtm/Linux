@@ -1,5 +1,5 @@
 pipeline{
-      Agent any
+      agent any
         stages{
            stage('Build'){
                  steps{
@@ -13,7 +13,7 @@ pipeline{
                      sh 'java Hello'
                   }
              }
-         stage('Build'){
+         stage('Depoly'){
                  steps{
                      echo 'Deploying Java application'
                      echo 'Application deployed successfully'
